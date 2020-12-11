@@ -8,8 +8,12 @@ h1 {
     justify-content: center;
     background-color: white;
     color: black;
-    margin: 0;
+    margin: 1rem;
     padding: 2rem;
+}
+
+h1:hover {
+    color: #c1222d;
 }
 
 h2, h3 {
@@ -23,6 +27,10 @@ h2, h3 {
 }
 
 h1 > a {
+    color: black;
+}
+
+h2 > a:hover {
     color: black;
 }
 

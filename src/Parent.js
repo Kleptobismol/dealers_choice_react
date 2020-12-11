@@ -2,10 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import Hands from './Components/Hands.js'
 import Hand from './Components/Hand.js'
-import Comments from './Components/Comments'
 import Header from './Components/Header.js'
 
-export default class Main extends React.Component {
+export default class Parent extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -33,11 +32,10 @@ export default class Main extends React.Component {
     render() {
         const { hands, selectedHand } = this.state
         return (
-            <div>
+            <div id='main' className='container'>
                 <Header component={ this }/>
                 <Hands hands={ hands } selectedHand={ selectedHand } component={ this }/>
                 <Hand selectedHand={ selectedHand }/>
-                <Comments selectedHand={ selectedHand }/>
             </div>
         )
     }

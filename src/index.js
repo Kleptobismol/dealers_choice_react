@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './Main'
+import Parent from './Parent'
 
 ReactDOM.render(
-  <Main />,
+  <Parent />,
   document.getElementById('app')
 )

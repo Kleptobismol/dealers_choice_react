@@ -8,13 +8,14 @@ const app = express();
 app.use(express.static('public/css'));
 app.use(express.static('public/images'));
 app.use(express.static('src/'))
+app.use(express.static('dist/'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.get('/style.css', (req, res) => res.sendFile(path.join(__dirname, 'style.css')));
 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'src', 'index.html'))
+    res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'))
   })
 
 app.get('/hands', async(req, res, next) => {

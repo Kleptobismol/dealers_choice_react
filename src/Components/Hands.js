@@ -14,6 +14,7 @@ const Hands = ({ hands, selectedHand, component }) => {
             </div>
         )
     }
+    else { return null }
 }
 
 export default Hands
